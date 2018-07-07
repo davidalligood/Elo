@@ -1,0 +1,91 @@
+# Orientation defines whether widgets are stacked (vertical)
+# or are placed side by side (horizontal)
+# padding is the space between the widgets and the
+# surrounding window
+
+<GridLayout>:
+    cols: 2
+    rows: 1
+    spacing: 5
+    padding: 50
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'chess.jpg'
+
+    Label:
+        text: "ELO Rankings"
+        size_hint_x: 2.5
+        text_size: self.size
+        halign: "center"
+        valign: "top"
+        font_size: 128
+
+    # size_hint defines the percentage of space taken on the
+    # x access and the percentage of space left over by the
+    # other widgets
+
+    BoxLayout:
+        orientation: "vertical"
+        #size_hint_y: None
+        height: "140dp"
+        #pos_hint: {'right': 1 , 'top': 1}
+        #pos_hint_y: None
+        #pos_y:
+        spacing: 10
+        padding: 10
+
+        canvas:
+            Color:
+                rgba: .1, .1, .9, .3
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label
+
+        Label:
+            text: "Username"
+            size_hint_y: None
+            height: 35
+            text_size: self.size
+            #pos_hint: {"top": 0}
+            halign: "left"
+            valign: "bottom"
+            #pos_hint= None
+
+        TextInput:
+            id: first_name
+            multiline: False
+            size_hint_y: None
+            height: 55
+            # size_hint_x: .75
+            # size_hint_y: .125
+
+        Label:
+            text: "Password"
+            size_hint_y: None
+            text_size: self.size
+            halign: "left"
+            valign: "bottom"
+
+        TextInput:
+            id: last_name
+            multiline: False
+            password: True
+            size_hint_y: None
+            height: 55
+            #pos_hint={'top': 1}
+            #pos_hint_y: None
+            #y: 100
+            # size_hint_x: .75
+            # size_hint_y: .125
+
+        Button:
+            text: "Login"
+            size_hint: .35, .2
+            pos_hint: {"right": 1}
+
+        Label
