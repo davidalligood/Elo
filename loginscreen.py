@@ -11,11 +11,11 @@ from kivy.graphics import Color, Rectangle
 # With a box layout we arrange widgets in a horizontal
 # or vertical box
 
-class GridLayoutApp(App):
+class LoginScreenApp(App):
 
     def build(self):
         return GridLayout()
 
-blApp = GridLayoutApp()
+blApp = LoginScreenApp()
 
 blApp.run()
