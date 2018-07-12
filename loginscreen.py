@@ -1,7 +1,5 @@
 __author__ = 'David'
 
-print("Hello World")
-
 import kivy
 kivy.require('1.9.0')
 
